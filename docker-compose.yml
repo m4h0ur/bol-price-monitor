@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  price-monitor:
+    build: .
+    container_name: bol-price-monitor
+    environment:
+      - TELEGRAM_BOT_TOKEN=7648387566:Your_Telegram_Token
+      - CHECK_INTERVAL=3600
+    volumes:
+      - ./data:/app/data
+    restart: always
